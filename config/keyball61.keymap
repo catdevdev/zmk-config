@@ -45,8 +45,8 @@
 &none &none        &none        &none        &none        &none          &none        &none        &none        &none        &none        &none
 &none &kp Q        &kp W        &kp F        &kp P        &kp B          &kp J        &kp L        &kp U        &kp Y        &kp SEMI     &none
 &none &hm LGUI A   &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp G          &kp M        &hm RSHFT N  &hm RCTRL E  &hm RALT I   &hm RGUI O   &none
-&none &kp Z        &kp X        &kp C        &kp D        &kp V          &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH     &none
-&none &none        &none        &lt MEDIA ESC &lt MOUSE TAB &lt NAV SPACE &lt SYM RET  &lt NUM BSPC &none       &none        &none        &none
+&none &kp Z        &kp X        &kp C        &kp D        &kp V          &none        &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH
+&none              &none        &none        &none        &none          &lt MEDIA ESC &lt MOUSE TAB &lt NAV SPACE &lt SYM RET  &lt NUM BSPC &none
             >;
         };
 
@@ -54,9 +54,9 @@
             label = "NAV";
             bindings = <
 &none &none        &none        &none        &none        &none          &none        &none        &none        &none        &none        &none
-&none &none        &none        &none        &none        &none          &kp LC(V)    &kp LC(C)    &kp LC(X)    &kp LC(Z)    &none        &none
-&none &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &none          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp CAPS     &none
-&none &none        &none        &none        &none        &none          &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp INS      &none
+&none &none        &none        &none        &none        &none          &kp LC(V)    &kp UP       &kp LC(X)    &kp LC(Z)    &none        &none
+&none &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &none          &kp LEFT     &kp DOWN     &kp RIGHT    &kp LC(C)    &kp CAPS     &none
+&none &none        &none        &none        &none        &none          &none        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp INS
 &none &none        &none        &none        &trans       &trans         &trans       &trans       &none        &none        &none        &none
             >;
         };
@@ -78,7 +78,7 @@
 &none &none        &none        &none        &none        &none          &none        &none        &none        &none        &none        &none
 &none &none        &none        &none        &none        &none          &none        &none        &none        &none        &none        &none
 &none &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &none          &none        &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &none
-&none &none        &none        &none        &none        &none          &kp C_STOP   &kp C_PP     &kp C_MUTE   &none        &none        &none
+&none &none        &none        &none        &none        &none          &none        &kp C_STOP   &kp C_PP     &kp C_MUTE   &none        &none
 &none &none        &none        &trans       &trans       &trans         &none        &none        &none        &none        &none        &none
             >;
         };

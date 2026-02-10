@@ -35,7 +35,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
-neioluy;luy;luy;,,,,,,,,,,,,,,,
+
     keymap {
         compatible = "zmk,keymap";
 

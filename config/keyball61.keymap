@@ -26,7 +26,6 @@
 
 / {
     behaviors {
-        // Callum Style Sticky Mod: Releases immediately on next key press
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK";
@@ -37,8 +36,6 @@
             ignore-modifiers;
         };
 
-        // Custom behavior for the "Mouse Layer" tap-hold
-        // Tap = Space, Hold = Mouse Layer
         lt_mouse: layer_tap_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MOUSE";
@@ -51,7 +48,6 @@
     };
 
     macros {
-        // App Switcher (Cmd+Tab)
         swapper: swapper {
             compatible = "zmk,behavior-macro";
             label = "SWAPPER";
@@ -63,7 +59,6 @@
                 , <&macro_release &kp LGUI>;
         };
         
-        // Window Switcher (Cmd+Grave - switch windows of same app)
         swapper_win: swapper_win {
             compatible = "zmk,behavior-macro";
             label = "SWAPPER_WIN";
@@ -87,11 +82,10 @@
 &none &kp Q    &kp W    &kp F      &kp P          &kp G                                             &kp J        &kp L        &kp U        &kp Y        &kp SQT      &none
 &none &kp A    &kp R    &kp S      &kp T          &kp D                                             &kp H        &kp N        &kp E        &kp I        &kp O        &none
 &none &kp Z    &kp X    &kp C      &kp V          &kp B          &none             &none            &kp K        &kp M        &kp COMMA    &kp DOT      &kp SEMI     &none
-&none &none    &none    &kp LSHFT  &mo NAV        &lt_mouse MOUSE SPACE  &kp RET   &mo SYM          &none        &none        &none        &none        &none        &none
+&none &none    &none    &none      &kp LSHFT      &mo NAV        &lt_mouse MOUSE SPACE  &kp RET     &mo SYM      &none        &none        &none        &none        &none
             >;
         };
 
-        // LAYER 1: NAV (Activated by Left Thumb 2)
         // Right Thumb 2 becomes Backspace here!
         nav_layer {
             label = "NAV";
@@ -100,7 +94,7 @@
 &none &kp TAB      &swapper     &kp LC(LS(TAB)) &kp LC(TAB) &kp C_VOL_UP                            &sys_reset   &kp HOME     &kp UP       &kp END      &kp DEL      &none
 &none &skq LSHFT   &skq LCTRL   &skq LALT    &skq LGUI    &kp C_VOL_DN                              &caps_word   &kp LEFT     &kp DOWN     &kp RIGHT    &kp BSPC     &none
 &none &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LBKT) &kp LG(RBKT) &kp C_PP     &none           &none       &kp PG_DN    &kp PG_UP    &swapper_win &kp RET      &none        &none
-&none &none        &none        &trans       &trans       &trans        &trans          &kp BSPC    &none        &none        &none        &none        &none        &none
+&none &none        &none        &none        &trans       &trans        &trans          &trans      &kp BSPC     &none        &none        &none        &none        &none
             >;
         };
 
@@ -112,7 +106,7 @@
 &none &kp ESC   &kp LBKT  &kp LBRC   &kp LPAR   &kp TILDE                                 &kp CARET    &kp RPAR   &kp RBRC   &kp RBKT   &kp GRAVE &none
 &none &kp MINUS &kp STAR  &kp EQUAL  &kp UNDER  &kp DLLR                                  &kp HASH     &skq RGUI  &skq RALT  &skq RCTRL &skq RSHFT &none
 &none &kp PLUS  &kp PIPE  &kp AT     &kp FSLH   &kp PRCNT    &none          &none         &kp BSLH     &kp AMPS   &kp QMARK  &kp EXCL   &none     &none
-&none &none     &none     &kp LSHFT  &mo NAV    &trans       &kp RET        &trans        &none        &none      &none      &none      &none     &none
+&none &none     &none   &none  &kp LSHFT  &mo NAV    &trans       &kp RET        &trans        &none        &none      &none      &none      &none     &none
             >;
         };
 
@@ -124,7 +118,7 @@
 &none &none     &none     &none      &none      &none                                     &none        &none      &none      &none      &none     &none
 &none &skq LSHFT &skq LCTRL &skq LALT &skq LGUI &none                                     &none        &mkp LCLK  &mkp RCLK  &mkp MCLK  &none     &none
 &none &none     &none     &none      &none      &none        &none          &none         &none        &none      &none      &none      &none     &none
-&none &none     &none     &trans     &trans     &trans       &mkp LCLK      &mkp RCLK     &none        &none      &none      &none      &none     &none
+&none &none     &none   &none  &trans     &trans     &trans       &mkp LCLK      &mkp RCLK     &none        &none      &none      &none      &none     &none
             >;
         };
     };

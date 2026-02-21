@@ -7,6 +7,7 @@
 #define NAV 1
 #define SYM 2
 #define MOUSE 3
+#define SCROLL 4
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC DEL>;
@@ -77,44 +78,55 @@
         base_layer {
             label = "BASE";
             bindings = <
-&none      &none     &none     &none     &none     &none                 &none     &none     &none      &none     &none      &none
-&kp GRAVE  &kp Q     &kp W     &kp E     &kp R     &kp T                 &kp Y     &kp U     &kp I      &kp O     &kp P      &kp LBKT
-&none      &kp A     &kp S     &kp D     &kp F     &kp G                 &kp H     &kp J     &kp K      &kp L     &kp SEMI   &kp SQT
-&none      &kp Z     &kp X     &kp C     &kp V     &kp B    &none        &none     &kp N     &kp M      &kp COMMA &kp DOT    &kp FSLH   &kp RBKT
-&none      &none     &none     &none     &mo NAV   &lt_mouse MOUSE SPACE &kp LSHFT &kp RET   &lt SYM BSPC &none   &none      &none      &none      &none
+&mo SCROLL &none      &none      &none      &none      &none                                  &none      &none      &none      &none      &none      &none
+&kp GRAVE  &kp Q      &kp W      &kp E      &kp R      &kp T                                  &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LBKT
+&none      &kp A      &kp S      &kp D      &kp F      &kp G                                  &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+&none      &kp Z      &kp X      &kp C      &kp V      &kp B      &none            &none      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RBKT
+&none      &none      &none      &none      &mo NAV    &lt_mouse MOUSE SPACE &kp LSHFT &kp RET    &lt SYM BSPC &none      &none      &none      &none      &none
             >;
         };
 
         nav_layer {
             label = "NAV";
             bindings = <
-&none &none        &none         &none           &none       &none                       &none        &none      &none      &none      &none      &none
-&none &none        &swapper      &kp LC(LS(TAB)) &kp LC(TAB) &kp C_VOL_UP                &sys_reset   &kp HOME   &kp UP     &kp END    &kp DEL    &none
-&none &skq LSHFT   &skq LCTRL    &skq LALT       &skq LGUI   &kp C_VOL_DN                &caps_word   &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC   &none
-&none &kp LC(LEFT) &kp LC(RIGHT) &kp TAB         &kp ESC     &kp C_PP     &none    &none &kp PG_DN    &kp PG_UP  &swapper_win &kp RET  &none      &none
-&none &none        &none         &none           &trans      &trans       &trans   &trans &trans      &kp BSPC   &none      &none      &none      &none      &none
+&none &none        &none        &none         &none           &none       &none                            &none        &none      &none      &none      &none      &none
+&none &none        &swapper     &kp LC(LS(TAB)) &kp LC(TAB) &kp C_VOL_UP                           &sys_reset   &kp HOME   &kp UP     &kp END    &kp DEL    &none
+&none &skq LSHFT   &skq LCTRL   &skq LALT       &skq LGUI   &kp C_VOL_DN                           &caps_word   &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC   &none
+&none &kp LC(LEFT) &kp LC(RIGHT) &kp TAB         &kp ESC     &kp C_PP    &none        &none &kp PG_DN    &kp PG_UP  &swapper_win &kp RET  &none      &none
+&none &none        &none        &none         &none           &trans      &trans       &trans   &trans &trans       &kp BSPC   &none      &none      &none      &none      &none
             >;
         };
 
         sym_layer {
             label = "SYM";
             bindings = <
-&none &none     &none     &none     &none     &none                     &none      &none      &none      &none      &none      &none
-&none &none     &kp LBKT  &kp LBRC  &kp LPAR  &kp TILDE                 &kp CARET  &kp RPAR   &kp RBRC   &kp RBKT   &kp GRAVE  &none
-&none &kp MINUS &kp STAR  &kp EQUAL &kp UNDER &kp DLLR                  &kp HASH   &skq RGUI  &skq RALT  &skq RCTRL &skq RSHFT &none
-&none &kp PLUS  &kp PIPE  &kp AT    &kp FSLH  &kp PRCNT   &none    &none &kp BSLH   &kp AMPS   &kp QMARK  &kp EXCL   &none      &none
-&none &none     &none     &none     &mo NAV   &trans      &kp LSHFT &trans &trans     &none      &none      &none      &none      &none      &none
+&none &none     &none     &none     &none     &none                                &none      &none      &none      &none      &none      &none
+&none &none     &kp LBKT  &kp LBRC  &kp LPAR  &kp TILDE                            &kp CARET  &kp RPAR   &kp RBRC   &kp RBKT   &kp GRAVE  &none
+&none &kp MINUS &kp STAR  &kp EQUAL &kp UNDER &kp DLLR                             &kp HASH   &skq RGUI  &skq RALT  &skq RCTRL &skq RSHFT &none
+&none &kp PLUS  &kp PIPE  &kp AT    &kp FSLH  &kp PRCNT  &none        &none &kp BSLH   &kp AMPS   &kp QMARK  &kp EXCL   &none      &none
+&none &none     &none     &none     &mo NAV   &trans     &kp LSHFT &trans &trans     &none      &none      &none      &none      &none      &none
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&none &none      &none      &none      &none      &none                      &none      &none      &none      &none      &none      &none
-&none &none      &none      &none      &none      &none                      &none      &none      &none      &none      &none      &none
-&none &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &none                      &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none      &none
-&none &none      &none      &none      &none      &none       &none    &none &none      &none      &none      &none      &none      &none
-&none &none      &none      &none      &trans     &trans      &trans   &mkp LCLK &mkp RCLK &none      &none      &none      &none      &none
+&none &none      &none      &none      &none      &none                                &none      &none      &none      &none      &none      &none
+&none &none      &none      &none      &none      &none                                &none      &none      &none      &none      &none      &none
+&none &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &none                                &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none      &none
+&none &none      &none      &none      &none      &none      &none       &none &none      &none      &none      &none      &none      &none
+&none &none      &none      &none      &trans     &trans     &trans   &mkp LCLK &mkp RCLK &none      &none      &none      &none      &none
+            >;
+        };
+
+        scroll_layer {
+            label = "SCROLL";
+            bindings = <
+&trans &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };

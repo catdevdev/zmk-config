@@ -30,7 +30,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         fun_layer {
-            if-layers = <MOUSE SYM>;
+            if-layers = <SYM MOUSE>;
             then-layer = <FUN>;
         };
     };
@@ -113,7 +113,7 @@
 &none &none     &kp LBKT  &kp LBRC  &kp LPAR  &kp TILDE                                  &kp CARET  &kp RPAR   &kp RBRC   &kp RBKT   &kp GRAVE  &none
 &none &kp MINUS &kp STAR  &kp EQUAL &kp UNDER &kp DLLR                                   &kp HASH   &skq RGUI  &skq RALT  &skq RCTRL &skq RSHFT &none
 &none &kp PLUS  &kp PIPE  &kp AT    &kp FSLH  &kp PRCNT  &none        &none &kp BSLH   &kp AMPS   &kp QMARK  &kp EXCL   &none      &none
-&none &none     &none     &none     &mo NAV   &trans     &kp LSHFT &trans &trans     &none      &none      &none      &none      &none      &none      &none
+&none &none     &none     &none     &mo NAV   &lt_mouse MOUSE SPACE &kp LSHFT &trans &trans &none      &none      &none      &none      &none      &none      &none
             >;
         };
 
@@ -124,7 +124,7 @@
 &none &none      &none      &none      &none      &none                                      &none      &none      &none      &none      &none      &none
 &none &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &none                                      &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none      &none
 &none &none      &none      &none      &none      &none      &none       &none &none      &none      &none      &none      &none      &none      &none
-&none &none      &none      &none      &trans     &trans     &trans   &mkp LCLK &trans    &none      &none      &none      &none      &none
+&none &none      &none      &none      &trans     &trans     &trans   &mkp LCLK &lt SYM BSPC &none      &none      &none      &none      &none
             >;
         };
 

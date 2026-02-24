@@ -120,11 +120,11 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&none &none      &none      &none      &none      &none                                      &none      &none      &none      &none      &none      &none
-&none &none      &none      &none      &none      &none                                      &none      &none      &none      &none      &none      &none
-&none &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &none                                      &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none      &none
-&none &none      &none      &none      &none      &none      &none       &none &none      &none      &none      &none      &none      &none      &none
-&none &none      &none      &none      &trans     &trans     &trans   &mkp LCLK &lt SYM BSPC &none      &none      &none      &none      &none
+&none &none      &none      &none      &none      &none                                                &none      &none      &none      &none      &none      &none
+&none &none      &none      &none      &none      &none                                                &none      &none      &none      &none      &none      &none
+&none &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &none                                                &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none      &none
+&none &none      &none      &none      &none      &none      &none             &none      &none      &none      &none      &none      &none      &none
+&none &none      &none      &none      &trans     &trans     &trans   &mkp LCLK &lt SYM BSPC &none      &none      &none      &none      &none      &none
             >;
         };
 

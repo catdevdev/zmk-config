@@ -99,7 +99,7 @@
             label = "NAV";
             bindings = <
 &none &none        &none         &none        &none         &none                                      &none     &none      &none      &none      &none      &none
-&none &none        &kp TAB       &kp LC(LS(TAB)) &kp LC(TAB) &kp C_VOL_UP                              &none     &kp PG_UP  &kp UP    &kp PG_DOWN    &none    &none
+&none &none        &kp TAB       &kp LC(LS(TAB)) &kp LC(TAB) &kp C_VOL_UP                              &none     &kp PG_UP  &kp UP    &kp PG_DN    &none    &none
 &none &skq LSHFT   &skq LCTRL    &skq LALT       &skq LGUI   &kp C_VOL_DN                              &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none      &none
 &none &none        &kp C_FF      &kp C_FF        &kp ESC     &kp C_PP    &none                &sys_reset &none     &caps_word      &swapper_win &none    &none      &none
 &none &none        &none         &none        &none         &none           &trans      &trans       &trans   &trans &trans       &kp BSPC   &none      &none      &none      &none      &none
